@@ -48,8 +48,8 @@ Bootstrap: A popular CSS framework for building responsive and visually appealin
    - pip install pillow
 
 3. Apply Migrations:
-   `python manage.py makemigrations`
-   `pyhton manage.py migrate`
-   `pyhton manage.py createsuperuser`
+`python manage.py makemigrations`
+`pyhton manage.py migrate`
+`pyhton manage.py createsuperuser`
 
    
