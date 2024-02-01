@@ -39,3 +39,11 @@ Bootstrap: A popular CSS framework for building responsive and visually appealin
 # Getting Started
 1. Clone the Repository:
    `https://github.com/mokal2002/College-Project-eBookLIbrary/`
+
+2. install requirements tools
+   - Vs Code
+   - python
+   - pip install django
+   - pip install django-jazzmin
+   - pip install pillow
+     
