@@ -1,6 +1,7 @@
 # eBook Library Project
 Welcome to the eBook Library project! This web application is designed to serve as a digital library where users can explore, borrow, and read a wide variety of eBooks. The project is built using Python with the Django framework for the backend, and HTML, CSS, JavaScript, and Bootstrap for the frontend.
 
+[![eBook Library Project](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=f8peKSeN1nI&ab_channel=AniketMokal)
 
 
 
