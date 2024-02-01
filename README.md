@@ -54,6 +54,5 @@ Bootstrap: A popular CSS framework for building responsive and visually appealin
 `python manage.py runserver` #server started
 
 
-
-
-   
+# Access the Application:
+Open your web browser and go to http://localhost:8000 to view the eBook library.
