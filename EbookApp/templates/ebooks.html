@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% block css %}
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
+
+ *{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+  body{
+	
+	font-family: 'Merriweather Sans', sans-serif;
+	color: #ececec;
+	
+}  
+
+h2{
+	text-align: center;
+	margin-bottom: 5rem;
+	font-size: 4rem;
+}
+
+.all-products{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.product{
+	overflow: hidden;
+	background: #ffffff;
+	color: #21201e;
+	text-align: center;
+	width: 240px;
+	height: 400px;
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 1.2rem;
+	margin: 2rem;
+}
+
+.product .product-title, .product .product-price{
+	font-size: 18px;
+}
+
+.product:hover img{
+	scale:  1.1;
+}
+
+.product:hover {
+	box-shadow: 5px 15px 25px #eeeeee;
+}
+
+.product img {
+	height: 200px;
+	margin: 1rem;
+	transition: all 0.3s;
+}
+
+.product a:link, .product a:visited{
+	color: #ececec;
+	display: inline-block;
+	text-decoration: none;
+	background-color: #2c3e50;
+	padding: 1.2rem 3rem;
+	border-radius: 1rem;
+	margin-top: 1rem;
+	font-size: 14px;
+	transition: all 0.2s;
+}
+
+.product a:hover{
+	transform: scale(1.1);
+}
+
+
+
+ {% endblock %}
+
+{% block body %}
+{% load static %}
+
+<section class="products mb-5">
+    {% comment %} <h1> {{product.category}} </h1> {% endcomment %}
+    <div class="all-products">
+      {% for i in products %}
+
+        <div class="product">
+            <img src="/media/{{i.image}}" alt="Book image">
+            <div class="product-info">
+                <h4 class="product-title"><b>{{i.name|slice:"0:15"}}</b>
+                </h4>
+                <p class="product-price"><small>{{i.desc|slice:"0:15"}}...</small></p>
+                <a class="product-btn" href="/media/{{i.pdf_file}}" target="_blank">Download</a>
+
+            </div>
+        </div>
+      {% endfor %}
+
+        
+        
+        
+    </div>
+</section>
+
+ {% endblock %}
+
+</div>

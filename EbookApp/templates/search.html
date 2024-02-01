@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+{% block title %}e-Book | Search Result{% endblock title %}
+{% block css %}
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
+
+ *{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+  body {
+  {% comment %} .error-template {padding: 40px 15px;text-align: center;}
+  .error-actions {margin-top:15px;margin-bottom:15px;}
+  .error-actions .btn { margin-right:10px; {% endcomment %}
+	font-family: 'Merriweather Sans', sans-serif;
+	color: #ececec;
+	
+}  
+
+h2{
+	text-align: center;
+	margin-bottom: 5rem;
+	font-size: 4rem;
+}
+
+.all-products{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.product{
+	overflow: hidden;
+	background: #ffffff;
+	color: #21201e;
+	text-align: center;
+	width: 240px;
+	height: 400px;
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 1.2rem;
+	margin: 2rem;
+}
+
+.product .product-title, .product .product-price{
+	font-size: 18px;
+}
+
+.product:hover img{
+	scale:  1.1;
+}
+
+.product:hover {
+	box-shadow: 5px 15px 25px #eeeeee;
+}
+
+.product img {
+	height: 200px;
+	margin: 1rem;
+	transition: all 0.3s;
+}
+
+.product a:link, .product a:visited{
+	color: #ececec;
+	display: inline-block;
+	text-decoration: none;
+	background-color: #2c3e50;
+	padding: 1.2rem 3rem;
+	border-radius: 1rem;
+	margin-top: 1rem;
+	font-size: 14px;
+	transition: all 0.2s;
+}
+
+.product a:hover{
+	transform: scale(1.1);
+}
+
+
+
+ {% endblock %}
+
+{% block body %}
+{% load static %}
+
+<section class="products">
+    <div class="container my-3">
+    <h3>Search Result :</h3>
+
+    {% if products|length < 1 %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="container">
+                    <h1>
+                        Oops!</h1>
+                    <h2>
+                        Book Not Found</h2>
+                        <div align="center" color='black'>
+                    <h6>Your Search - <b> {{query}} </b> - did not match any documents.
+                    </div>
+                    <div class="error-actions my-3" align="center">
+                        <a href="/" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-home"></span>
+                            Take Me Home </a><a href="/request_page/" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-envelope"></span> Request a Book </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+       {% endif %}
+    </div>
+    {% comment %} <h1> {{product.category}} </h1> {% endcomment %}
+    <div class="all-products">
+       
+      {% for i in products %}
+      
+        <div class="product">
+
+            <img src="/media/{{i.image}}" alt="Book image">
+            <div class="product-info">
+                <h4 class="product-title"><b>{{i.name|slice:"0:15"}}</b>
+                </h4>
+                <p class="product-price"><small>{{i.desc|slice:"0:15"}}...</small></p>
+                <a class="product-btn" href="/media/{{i.pdf_file}}" target="_blank">Download</a>
+
+            </div>
+        </div>
+      {% endfor %}
+
+        
+        
+        
+    </div>
+</section>
+
+ {% endblock %}
+
+</div>

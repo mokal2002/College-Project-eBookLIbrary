@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}{{product.name}}{% endblock title %}
+{% block body %}{% load static %}
+<div class="row pt-3">
+    <div class="col-md-3">
+        <img src="{{ products.image.url }}" class="img-responsive"/>
+    </div>
+
+    <div class="col-md-9">
+        <p><strong>Title:</strong> {{ products.title }}</p>
+        <p><strong>Authors:</strong> {{ products.authors }}</p>
+        <p><strong>ISBN:</strong> {{ products.isbn }}</p>
+        <p><strong>Pages:</strong> {{ products.pages }}</p>
+        <p><strong>Price: </strong> USD {{ products.price }}</p>
+        <p><a class="btn btn-success" href="{{ products.ebook.url }}">Download NOW</a></p>
+    </div>
+</div>
+
+
+
+
+{% endblock body %}

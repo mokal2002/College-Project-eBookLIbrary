@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+{% comment %} <script src="https://cdn.tailwindcss.com"></script> {% endcomment %}
+{% comment %} more cards {% endcomment %}
+{% comment %} <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script> {% endcomment %}
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link href="/assets/css/A.main.css,,qv3.84+responsive.css,,qv3.84+3rdparty.css,,qv3.84,Mcc.pKHzojP7JA.css.pagespeed.cf.TpGo09CqiG.css" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+{% comment %} md5 {% endcomment %}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<link rel="stylesheet" href="node_modules/mdbootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css">
+<link rel="stylesheet" href="node_modules/mdbootstrap/css/style.css">
+{% comment %}  {% endcomment %}
+<style>
+  {% block css %}
+  
+  {% endblock %}
+</style>
+      
+</head>
+
+  <body>
+{% load static %}
+
+    {% comment %} navbar started here {% endcomment %}
+    <header class="p-3 text-bg-dark sticky-top">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 mr-4 text-white text-decoration-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-book" viewBox="0 0 16 16">
+              <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+            </svg>
+          </a>
+  
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="/" class="nav-link px-2 text-white">Home</a></li>
+            <li><a href="/categories/" class="nav-link px-2 text-white">Categories</a></li>
+
+            <li><a href="/request_page/" class="nav-link px-2 text-white">Request Book</a></li>
+            <li><a href="/contact/" class="nav-link px-2 text-white">Contact Us</a></li>
+            <li><a href="/about/" class="nav-link px-2 text-white">About</a></li>
+
+            
+          </ul>
+  
+          <form method="get" action="/search/" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+            <input type="search" class="form-control form-control-lg text-bg-dark" placeholder="Search..." aria-label="Search" name="query" id="query">
+            
+          </form>
+  
+          
+        </div>
+      </div>
+    </header>
+    
+    {% comment %} <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+<span class="badge badge-text-dark" href="">Dark</span>
+</div> {% endcomment %}
+
+    {% for message in messages %}
+    <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+      <strong>Message : </strong> {{message}}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+    
+    
+    {% block body %}{% endblock body %}
+<!-- Remove the container if you want to extend the Footer to full width. -->
+{% comment %} <div class="container"> {% endcomment %}
+
+  <footer class="bg-dark text-center text-white fixed-bottom">
+  <!-- Grid container -->
+  
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2023 Copyright:
+    <a class="text-white" href="/contact/">ebook@gmail.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+  
+{% comment %} </div> {% endcomment %}
+<!-- End of .container -->
+{% comment %} md5 {% endcomment %}
+<script type="text/javascript" src="node_modules/mdbootstrap/js/jquery.min.js"></script>
+<script type="text/javascript" src="node_modules/mdbootstrap/js/popper.min.js"></script>
+<script type="text/javascript" src="node_modules/mdbootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="node_modules/mdbootstrap/js/mdb.min.js"></script>
+{% comment %}  {% endcomment %}
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+  </body>
+  <script>
+    {% block js %}
+    {% endblock js %}
+  </script>
+</html>
