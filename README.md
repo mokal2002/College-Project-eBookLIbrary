@@ -9,5 +9,5 @@ User Authentication: Secure user authentication and authorization system to ensu
 
 # Technologies Used
 - Python Django: A high-level Python web framework that encourages rapid development and clean, pragmatic design.
--HTML, CSS, JavaScript: Standard web development technologies for creating the frontend interface.
--Bootstrap: A popular CSS framework for building responsive and visually appealing web pages.
+- HTML, CSS, JavaScript: Standard web development technologies for creating the frontend interface.
+- Bootstrap: A popular CSS framework for building responsive and visually appealing web pages.
